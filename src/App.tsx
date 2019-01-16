@@ -19,16 +19,19 @@ class App extends Component<Props, State> {
     getUsers().then(users => this.setState({ users }));
   }
 
-  // handleClickDelete = id: Number => {
-  //   this.setState(prevState => {
-  //     return { users: [...prevState.filter(u => u.id !== id)] };
-  //   });
-  // };
+  handleClickDelete = (id: Number): void => {
+    this.setState(state => {
+      return { users: state.users.filter(u => u.id !== id) };
+    });
+  };
 
   render() {
     return (
       <div className="App">
-        <Users users={this.state.users} />
+        <Users
+          users={this.state.users}
+          onClickDelete={this.handleClickDelete}
+        />
       </div>
     );
   }

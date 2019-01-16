@@ -3,7 +3,7 @@ import { UserEntity } from "./model/userEntity";
 
 interface Props {
   users: UserEntity[];
-  //onClickDelete: Function;
+  onClickDelete: Function;
 }
 
 export const Users: React.StatelessComponent<Props> = props => {
@@ -14,7 +14,7 @@ export const Users: React.StatelessComponent<Props> = props => {
         {props.users.map(u => (
           <li key={u.id}>
             {u.name}{" "}
-            {/* <button onClick={() => props.onClickDelete(u.id)}>Delete</button> */}
+            <button onClick={() => props.onClickDelete(u.id)}>Delete</button>
           </li>
         ))}
       </ul>
