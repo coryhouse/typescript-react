@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Users from "./Users";
 import { UserEntity } from "./model/userEntity";
+import { getUsers } from "./api/userApi";
 import "./App.css";
 
 interface State {
@@ -11,8 +12,12 @@ interface Props {}
 
 class App extends Component<Props, State> {
   state = {
-    users: [{ id: 1, name: "Cory" }, { id: 2, name: "Bob" }]
+    users: []
   };
+
+  componentDidMount() {
+    getUsers().then(users => this.setState({ users }));
+  }
 
   // handleClickDelete = id: Number => {
   //   this.setState(prevState => {
