@@ -2,6 +2,12 @@
 
 This project kicks the tires on TypeScript with React.
 
+## Resources
+
+I used the following resources to build this:
+
+- https://github.com/Lemoncode/react-typescript-samples
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
