@@ -20,9 +20,7 @@ class App extends Component<Props, State> {
   }
 
   handleClickDelete = (id: Number): void => {
-    this.setState(state => {
-      return { users: state.users.filter(u => u.id !== id) };
-    });
+    this.setState(state => ({ users: state.users.filter(u => u.id !== id) }));
   };
 
   render() {
