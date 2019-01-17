@@ -1,7 +1,7 @@
 import React from "react";
 import Courses from "./Courses";
 import { Course } from "./model/course";
-import { getCourses } from "./api/courseApi";
+import { getCourses, deleteCourse } from "./api/courseApi";
 import "./App.css";
 
 interface State {
@@ -24,9 +24,11 @@ class App extends React.Component<Props, State> {
   }
 
   handleClickDelete = (id: Number): void => {
-    this.setState(state => ({
-      courses: state.courses.filter(c => c.id !== id)
-    }));
+    deleteCourse(id).then(() => {
+      this.setState(state => ({
+        courses: state.courses.filter(c => c.id !== id)
+      }));
+    });
   };
 
   render() {
