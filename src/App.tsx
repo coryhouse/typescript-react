@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import Users from "./Users";
 import { UserEntity } from "./model/userEntity";
 import { getUsers } from "./api/userApi";
@@ -8,10 +8,14 @@ interface State {
   users: UserEntity[];
 }
 
-interface Props {}
+// Specify that this component doesn't accept children as a prop
+interface Props {
+  // children?: never;
+}
 
-class App extends Component<Props, State> {
-  state = {
+class App extends React.Component<Props, State> {
+  // readonly is optional, but helps protect against accidental mutations.
+  readonly state = {
     users: []
   };
 
