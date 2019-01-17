@@ -1,11 +1,11 @@
 import React from "react";
-import Users from "./Users";
-import { UserEntity } from "./model/userEntity";
-import { getUsers } from "./api/userApi";
+import Courses from "./Courses";
+import { Course } from "./model/course";
+import { getCourses } from "./api/courseApi";
 import "./App.css";
 
 interface State {
-  users: UserEntity[];
+  courses: Course[];
 }
 
 // Specify that this component doesn't accept children as a prop
@@ -16,22 +16,24 @@ interface Props {
 class App extends React.Component<Props, State> {
   // readonly is optional, but helps protect against accidental mutations.
   readonly state = {
-    users: []
+    courses: []
   };
 
   componentDidMount() {
-    getUsers().then(users => this.setState({ users }));
+    getCourses().then(courses => this.setState({ courses }));
   }
 
   handleClickDelete = (id: Number): void => {
-    this.setState(state => ({ users: state.users.filter(u => u.id !== id) }));
+    this.setState(state => ({
+      courses: state.courses.filter(c => c.id !== id)
+    }));
   };
 
   render() {
     return (
       <div className="App">
-        <Users
-          users={this.state.users}
+        <Courses
+          courses={this.state.courses}
           onClickDelete={this.handleClickDelete}
         />
       </div>
