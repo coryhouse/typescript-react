@@ -2,11 +2,18 @@
 
 This project kicks the tires on TypeScript with React.
 
+This was created using `npx create-react-app ts-test --typescript`.
+
+It uses json-server as a mock API.
+
 ## Resources
 
 I used the following resources to build this:
 
-- https://github.com/Lemoncode/react-typescript-samples
+- [react-typescript-samples project](https://github.com/Lemoncode/react-typescript-samples)
+- [TS tips](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
+- [Multiple TS Config](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/)
+- [Express TS example](https://github.com/dalenguyen/rest-api-node-typescript)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
