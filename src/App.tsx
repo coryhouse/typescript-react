@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Users from "./Users";
 import { UserEntity } from "./model/userEntity";
 import { getUsers } from "./api/userApi";
