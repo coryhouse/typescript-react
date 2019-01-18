@@ -2,11 +2,14 @@ import React from "react";
 import { Course } from "./model/course";
 
 interface Props {
+  // Instead of import above, could use TypeScript's import() syntax, but in this case no value add since only types in the model file
+  // More info here: https://davidea.st/articles/typescript-2-9-import-types
+  //courses: import("./model/course").Course[];
   courses: Course[];
   onClickDelete: Function;
 }
 
-export const Courses: React.StatelessComponent<Props> = props => {
+export const Courses: React.FC<Props> = props => {
   return (
     <>
       <h1>Courses</h1>
