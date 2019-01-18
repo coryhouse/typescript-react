@@ -14,6 +14,7 @@ I used the following resources to build this:
 - [TS tips](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
 - [Multiple TS Config](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/)
 - [Express TS example](https://github.com/dalenguyen/rest-api-node-typescript)
+- [Use TS Import() to import types (the rest of the file isn't pulled into your app, so a perf win if the file with types has runtime code your app doesn't use. Note that TypeScript is smart enough to remove imports that only use types.)](https://davidea.st/articles/typescript-2-9-import-types)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
