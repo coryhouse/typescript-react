@@ -1,7 +1,7 @@
 export interface Course {
-  id: Number;
-  title: String;
-  slug: String;
-  authorId: Number;
+  id: number;
+  title: string;
+  slug: string;
+  authorId: number;
   category: string;
 }
