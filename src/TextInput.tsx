@@ -1,12 +1,12 @@
 import React from "react";
 
 interface Props {
-  name: "";
-  value: "";
-  label: "";
+  name: string;
+  value: string;
+  label: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): any;
-  placeholder: "";
-  error: "";
+  placeholder?: string;
+  error: string;
 }
 
 export const TextInput: React.FC<Props> = ({

@@ -1,17 +1,17 @@
 import React from "react";
 
 interface Option {
-  value: "";
-  text: "";
+  value: string;
+  text: string;
 }
 
 interface Props {
-  name: "";
-  label: "";
+  name: string;
+  label: string;
   onChange(event: React.ChangeEvent<HTMLSelectElement>): any;
-  defaultOption: "";
-  value: "";
-  error: "";
+  defaultOption: string;
+  value: string;
+  error: string;
   options: Option[];
 }
 
