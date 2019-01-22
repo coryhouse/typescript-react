@@ -1,13 +1,13 @@
 import React from "react";
 
-interface Props {
+type Props = {
   name: string;
   value: string;
   label: string;
   onChange(event: React.ChangeEvent<HTMLInputElement>): any;
   placeholder?: string;
-  error: string;
-}
+  error?: string;
+};
 
 export const TextInput: React.FC<Props> = ({
   name,
@@ -18,9 +18,7 @@ export const TextInput: React.FC<Props> = ({
   error
 }) => {
   let wrapperClass = "form-group";
-  if (error.length > 0) {
-    wrapperClass += " " + "has-error";
-  }
+  if (error) wrapperClass += " " + "has-error";
 
   return (
     <div className={wrapperClass}>

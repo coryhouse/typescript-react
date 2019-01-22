@@ -1,19 +1,19 @@
 import React from "react";
 
-interface Option {
+type Option = {
   value: string;
   text: string;
-}
+};
 
-interface Props {
+type Props = {
   name: string;
   label: string;
   onChange(event: React.ChangeEvent<HTMLSelectElement>): any;
   defaultOption: string;
-  value: string;
-  error: string;
+  value: string | number;
+  error?: string;
   options: Option[];
-}
+};
 
 const SelectInput: React.FC<Props> = ({
   name,
