@@ -20,6 +20,18 @@ I used the following resources to build this:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Key Concepts
+
+In TypeScript, two types are compatible if their internal structure is compatible.
+`&` - Intersection operator (create a new type by intersecting one or more types or interfaces)
+`Partial<Shape & Perimeter>` - Partial mapped type
+
+### [Type vs interface](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+
+1. Can't use `implements` on class with a union type
+2. Can't use `extends` on interface with a union type
+3. Declaration merging doesn't work with type. So use interface for public API definition when authoring a library or 3rd party ambient type definitions. Why? Interfaces can be merged (you can declare the same interface twice). Types don't support that.
+
 ## Available Scripts
 
 In the project directory, you can run:
