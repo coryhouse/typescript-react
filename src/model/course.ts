@@ -1,7 +1,7 @@
 export type Course = {
-  id: number;
+  id?: number;
   title: string;
   slug: string;
-  authorId: number;
+  authorId?: number;
   category: string;
 };
