@@ -2,7 +2,9 @@ import React from "react";
 import Courses from "./Courses";
 import { Course } from "./model/course";
 import { getCourses, deleteCourse } from "./api/courseApi";
+import { Switch, Route, NavLink } from 'react-router-dom';
 import "./App.css";
+import ManageCoursePage from './ManageCoursePage';
 
 interface State {
   courses: Course[];
@@ -34,10 +36,21 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div className="App">
-        <Courses
-          courses={this.state.courses}
-          onClickDelete={this.handleClickDelete}
-        />
+        <nav>
+          <ul>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/course">Course</NavLink></li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/" exact render={() => 
+            <Courses
+              courses={this.state.courses}
+              onClickDelete={this.handleClickDelete}
+            />
+          }/>
+          <Route path="/course" component={ManageCoursePage} />
+        </Switch>
       </div>
     );
   }
