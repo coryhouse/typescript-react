@@ -10,6 +10,7 @@ It uses json-server as a mock API.
 
 I used the following resources to build this:
 
+- [Microsoft TS Handbook](https://github.com/Microsoft/TypeScript-Handbook)
 - [Compiler / TSConfig options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 - [react-typescript-samples project](https://github.com/Lemoncode/react-typescript-samples)
 - [TS tips](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
