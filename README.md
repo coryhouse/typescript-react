@@ -15,10 +15,12 @@ I used the following resources to build this:
 - [react-typescript-samples project](https://github.com/Lemoncode/react-typescript-samples)
 - [TS tips](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680)
 - [Interface vs Type](https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
+- [Ultimate React Component Patterns](https://github.com/Hotell/blogposts/tree/master/2018-02/ultimate-react-component-patterns) and [Medium Post](https://levelup.gitconnected.com/ultimate-react-component-patterns-with-typescript-2-8-82990c516935)
 - [Multiple TS Config](https://codepunk.io/multiple-tsconfig-files-for-a-single-typescript-project/)
 - [Express TS example](https://github.com/dalenguyen/rest-api-node-typescript)
 - [Use TS Import() to import types (the rest of the file isn't pulled into your app, so a perf win if the file with types has runtime code your app doesn't use. Note that TypeScript is smart enough to remove imports that only use types.)](https://davidea.st/articles/typescript-2-9-import-types)
 - [TS Conversion Guide - Same app written in JS and TS from Microsoft](https://github.com/Microsoft/TypeScript-React-Conversion-Guide)
+- [TS with Redux](https://medium.com/@rossbulat/how-to-use-typescript-with-react-and-redux-a118b1e02b76)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
